@@ -1,0 +1,190 @@
+<html>
+<head>
+	<meta charset="utf-8" >
+    <link rel="stylesheet" href="LoginCssFile.css">
+	<script type="text/javascript" src="LoginJCFile.js"></script>
+	<title>Login</title>
+
+	    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="537933684003-nmi5gumnd88nl76k8ivhka7g2jrnf60v.apps.googleusercontent.com">
+
+ <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand1" href="#"><img src="img/mainlogo2.png" alt="Smiley face" height="50" width="110"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Request Volunteers</a>
+            </li>
+              <a class="nav-link" href="registerpage.html">Register</a>
+
+              <a class="nav-link" href="Log2.html">Contact</a>
+              <a href="#" onclick="signOut();">Sign out</a>
+
+
+
+
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+               <a class="nav-link" href="stats.html">Stats</a>
+               <a class="nav-link" href="conf.html">Calender</a>
+
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+ <!-- Header -->
+  <header class="intro-header" id="loginpage">
+
+
+  <body>
+  <!-- In the callback, you would hide the gSignInWrapper element on a
+  successful sign in -->
+
+
+
+    <form action="/action_page.php">
+       <div class="mainframe" class="container">
+       <div class="intro-message">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script>
+  var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init({
+        client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        // Request scopes in addition to 'profile' and 'email'
+        //scope: 'additional_scope'
+      });
+      attachSignin(document.getElementById('customBtn'));
+    });
+  };
+
+  function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          document.getElementById('name').innerText = "Signed in: " +
+              googleUser.getBasicProfile().getName();
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+  </script>
+  <style type="text/css">
+    #customBtn {
+      display: inline-block;
+      background: white;
+      color: #444;
+      width: 190px;
+      border-radius: 5px;
+      border: thin solid #888;
+      box-shadow: 1px 1px 1px grey;
+      white-space: nowrap;
+    }
+    #customBtn:hover {
+      cursor: pointer;
+    }
+    span.label {
+      font-family: serif;
+      font-weight: normal;
+    }
+    span.icon {
+      background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 42px;
+      height: 42px;
+    }
+    span.buttonText {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 42px;
+      padding-right: 42px;
+      font-size: 14px;
+      font-weight: bold;
+      /* Use the Roboto font that is loaded in the <head> */
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+  </head>
+
+
+
+
+
+
+  
+  <div id="gSignInWrapper">
+    <span class="label">Sign in with:</span>
+    <div id="customBtn" class="customGPlusSignIn">
+      <span class="icon"></span>
+      <span class="buttonText">Google</span>
+    </div>
+  </div>
+  <div id="name"></div>
+  <script>startApp();</script>
+      </br>
+		  <h3 class="userPass">User Name</h3>
+		  <input type="text" id="userNameLogin" name="loginname" placeholder="User Name..">
+		  <h3 class="userPass">Password</h3>
+		  <input type="Password" id="passwordLogin" name="loginPassword" placeholder="Password..">
+		  </br>
+		  </br>
+		  <a href="gallery.html">
+		  <button onclick="submitButton()" type="button">Submit</button>
+		  </a>
+		  </br>
+		  </br>
+		  <a href="gallery.html" class="paragraph">Don't have an accout? Create one</a>
+     </div>
+      </div>
+		</form>
+
+  </body>
+</html>
+ <p class="copyrightloginpg">Copyright &copy; volunteerconects 2017. All Rights Reserved</p>
+  </header>
+
+
+
+
+	<div>
+
+</div>
+</body>
+
+
+</html>
