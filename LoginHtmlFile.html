@@ -141,37 +141,32 @@
   </style>
   </head>
 
+ <meta name="google-signin-client_id" content="537933684003-nmi5gumnd88nl76k8ivhka7g2jrnf60v.apps.googleusercontent.com">
+</head>
+<body>
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
 
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-
-
-
-  
-  <div id="gSignInWrapper">
-    <span class="label">Sign in with:</span>
-    <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
-    </div>
-  </div>
-  <div id="name"></div>
-  <script>startApp();</script>
-      </br>
-		  <h3 class="userPass">User Name</h3>
-		  <input type="text" id="userNameLogin" name="loginname" placeholder="User Name..">
-		  <h3 class="userPass">Password</h3>
-		  <input type="Password" id="passwordLogin" name="loginPassword" placeholder="Password..">
-		  </br>
-		  </br>
-		  <a href="gallery.html">
-		  <button onclick="submitButton()" type="button">Submit</button>
-		  </a>
-		  </br>
-		  </br>
-		  <a href="gallery.html" class="paragraph">Don't have an accout? Create one</a>
-     </div>
-      </div>
-		</form>
 
   </body>
 </html>
